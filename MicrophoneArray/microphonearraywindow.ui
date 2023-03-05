@@ -24,50 +24,476 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(0, 255, 255);
-color: rgb(255, 170, 127);</string>
+       <string notr="true"/>
       </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <widget class="QWidget" name="wToolBoxPageSetting">
+      <widget class="QWidget" name="toolBoxPage1">
        <property name="geometry">
         <rect>
          <x>0</x>
          <y>0</y>
          <width>200</width>
-         <height>449</height>
+         <height>457</height>
         </rect>
        </property>
        <attribute name="label">
-        <string>Page 1</string>
+        <string>General Settings</string>
        </attribute>
+       <widget class="QGroupBox" name="groupBox_4">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>220</y>
+          <width>171</width>
+          <height>131</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Microphone Board Status</string>
+        </property>
+        <widget class="QWidget" name="layoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>30</y>
+           <width>141</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_6">
+          <item>
+           <widget class="QLabel" name="label_6">
+            <property name="text">
+             <string>FW ver:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit"/>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="layoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>60</y>
+           <width>141</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_7">
+          <item>
+           <widget class="QLabel" name="label_7">
+            <property name="text">
+             <string>HW ver:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_2"/>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="layoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>90</y>
+           <width>141</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_8">
+          <item>
+           <widget class="QLabel" name="label_8">
+            <property name="text">
+             <string>IP: </string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>65</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_3"/>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>0</y>
+          <width>171</width>
+          <height>101</height>
+         </rect>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="title">
+         <string>Channel Enable</string>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <widget class="QCheckBox" name="tbAquiSetChannel1Chbox">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>86</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Channel 1</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="tbAquiSetChannel2Chbox">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>40</y>
+           <width>86</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Channel 2</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="tbAquiSetChannel3Chbox">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>60</y>
+           <width>86</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Channel 3</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="tbAquiSetChannel4Chbox">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>80</y>
+           <width>86</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Channel 4</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_2">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>110</y>
+          <width>171</width>
+          <height>101</height>
+         </rect>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="title">
+         <string>Channel Display</string>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <widget class="QCheckBox" name="tbAquiSetChannel1DispChbox">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>86</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Channel 1</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="tbAquiSetChannel2DispChbox">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>40</y>
+           <width>86</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Channel 2</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="tbAquiSetChannel3DispChbox">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>60</y>
+           <width>86</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Channel 3</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="tbAquiSetChannel4DispChbox">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>80</y>
+           <width>86</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Channel 4</string>
+         </property>
+        </widget>
+       </widget>
       </widget>
-      <widget class="QWidget" name="wToolBoxPageAquisition">
+      <widget class="QWidget" name="toolBoxPage2">
        <property name="geometry">
         <rect>
          <x>0</x>
          <y>0</y>
          <width>200</width>
-         <height>449</height>
+         <height>457</height>
         </rect>
        </property>
        <attribute name="label">
-        <string>Page 2</string>
+        <string>Aquisition Settings</string>
        </attribute>
+       <widget class="QGroupBox" name="groupBox_3">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>130</y>
+          <width>171</width>
+          <height>241</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Aquisition</string>
+        </property>
+        <widget class="QWidget" name="layoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>30</y>
+           <width>170</width>
+           <height>204</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>Sampling Frequency</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBoxSamplingFreq"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string>Downsampling rate</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBoxDownSampling"/>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBoxBurstAquiMode">
+            <property name="text">
+             <string>Burst Mode</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_5">
+            <item>
+             <widget class="QLabel" name="label_4">
+              <property name="text">
+               <string>Time:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineEditTimeAqu"/>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_5">
+              <property name="text">
+               <string>s</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBoxSDCardEn">
+            <property name="text">
+             <string>Enable SD card</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_4">
+            <item>
+             <widget class="QPushButton" name="pushButtonStartAqui">
+              <property name="text">
+               <string>Start</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButtonStopAqui">
+              <property name="text">
+               <string>Stop</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="layoutWidget_2">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>0</y>
+          <width>171</width>
+          <height>121</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_5">
+         <item>
+          <widget class="QLabel" name="labelFilePath">
+           <property name="text">
+            <string>Select the directory:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_3">
+           <property name="text">
+            <string>Filepath</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButtonSelectFilePath">
+           <property name="text">
+            <string>Select File ...</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
       </widget>
-      <widget class="QWidget" name="wToolBoxPageCommunication">
+      <widget class="QWidget" name="toolBoxPage3">
        <property name="geometry">
         <rect>
          <x>0</x>
          <y>0</y>
          <width>200</width>
-         <height>449</height>
+         <height>457</height>
         </rect>
        </property>
        <attribute name="label">
-        <string>Page</string>
+        <string>Communication Settings</string>
        </attribute>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>163</width>
+          <height>81</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <widget class="QLabel" name="portLabel">
+             <property name="text">
+              <string>Port:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="portEdit"/>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <item>
+            <spacer name="horizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Preferred</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>60</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="portPushButtonConfirm">
+             <property name="text">
+              <string>Confirm</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
       </widget>
      </widget>
     </item>
@@ -89,7 +515,7 @@ color: rgb(255, 170, 127);</string>
          <x>0</x>
          <y>0</y>
          <width>565</width>
-         <height>537</height>
+         <height>539</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="verticalLayout">
@@ -108,7 +534,7 @@ color: rgb(255, 170, 127);</string>
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>22</height>
+     <height>19</height>
     </rect>
    </property>
   </widget>
