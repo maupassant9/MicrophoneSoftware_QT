@@ -16,7 +16,15 @@ set(PROJECT_SOURCES
         main.cpp
         microphonearraywindow.cpp
         microphonearraywindow.h
+        microphonearraycfg.h
+        microphonearraycfg.cpp
         microphonearraywindow.ui
+        microphoneboard.h
+        microphoneboard.cpp
+        aquisition.h
+        aquisition.cpp
+        config.h
+        config.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

@@ -15,6 +15,9 @@ public:
     MicrophoneArrayWindow(QWidget *parent = nullptr);
     ~MicrophoneArrayWindow();
 
+
+
+
 private:
     Ui::MicrophoneArrayWindow *ui;
 };
