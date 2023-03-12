@@ -2,6 +2,7 @@
 #define MICROPHONEARRAYWINDOW_H
 
 #include <QMainWindow>
+#include "aquisition.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MicrophoneArrayWindow; }
@@ -14,6 +15,9 @@ class MicrophoneArrayWindow : public QMainWindow
 public:
     MicrophoneArrayWindow(QWidget *parent = nullptr);
     ~MicrophoneArrayWindow();
+
+signals:
+    void aquisitionStart(AquisitionCfg a)
 
 
 

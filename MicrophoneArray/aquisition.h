@@ -2,20 +2,35 @@
 #define AQUISITION_H
 
 #include <QFileInfo>
-class Aquisition
+#include "microphoneboard.h"
+
+class AquisitionCfg
 {
 public:
-    Aquisition();
-    bool isChannelEnable(int id);
-    bool isChannelDisplayEnable(int id);
-    void setChannelEnable(int id, bool e);
-    void setChannelDisplayEnable(int id, bool e);
+    AquisitionCfg(const MicrophoneBoard * b) noexcept;
+    ~AquisitionCfg();
+    AquisitionCfg(AquisitionCfg && a) noexcept;
+    AquisitionCfg(const AquisitionCfg & a) noexcept;
 
+    // channel configurations
+    bool isChannelEnable(uint16_t id) noexcept;
+    bool isChannelDisplayEnable(uint16_t id) noexcept;
+    void setChannelEnable(uint16_t id, bool e) noexcept;
+    void setChannelDisplayEnable(uint16_t id, bool e) noexcept;
+
+    //aquisition configurations
+    void setSamplingFreq(uint32_t sampF) noexcept;
+    bool setDownsampling(uint8_t rate) noexcept;
+    void setBusrtMode(bool e) noexcept;
+    void setAquisitionPeriod(uint16_t p) noexcept;
+    void setSDCardEnable(bool e) noexcept;
+    void setTransmitEnable(bool e) noexcept;
+    void setFilePath(QString f);
 private:
-    int samplingFreq;
-    int downSamplingRate;
+    uint32_t samplingFreq;
+    uint8_t downSamplingRate;
     bool isBurstMode;
-    int aquistionPeriod;
+    uint16_t aquistionPeriod;
     bool isSDCardEnable;
     bool isTransmitViaCommEnable;
 
@@ -23,9 +38,7 @@ private:
     bool * pChannelDisplayEnable;
 
     QString filepath;
-
-    bool startAquiFlag;
-    bool stopAquiFlag;
+    const uint8_t maxChannelNo;
 
 };
 
