@@ -1,7 +1,7 @@
 #include "aquisition.h"
 #include <memory>
 
-AquisitionCfg::AquisitionCfg(uint16_t channelNo) noexcept:
+AquisitionCfg::AquisitionCfg(const MicrophoneBoard &board) noexcept:
     samplingFreq {0},
     downSamplingRate {0},
     isBurstMode {false},
@@ -9,14 +9,14 @@ AquisitionCfg::AquisitionCfg(uint16_t channelNo) noexcept:
     isSDCardEnable {false},
     isTransmitViaCommEnable {false},
     filepath {""},
-    maxChannelNo {0}
+    maxChannelNo {board.maxChannelNumber}
 {
-    if(channelNo == 0){
+    if(board.maxChannelNumber == 0){
         pChannelEnable = nullptr;
         pChannelDisplayEnable = nullptr;
     } else {
-        pChannelEnable = new bool[channelNo];
-        pChannelDisplayEnable = new bool[channelNo];
+        pChannelEnable = new bool[board.maxChannelNumber];
+        pChannelDisplayEnable = new bool[board.maxChannelNumber];
     }
 }
 
@@ -66,52 +66,52 @@ AquisitionCfg::AquisitionCfg(AquisitionCfg&& a) noexcept:
 }
 
 
-bool AquisitionCfg::isChannelEnable(uint16_t id) noexcept
+bool AquisitionCfg::isChannelEnable(uint16_t id)
 {
     if(id < maxChannelNo) return pChannelEnable[id];
     else return false;
 }
 
 
-bool AquisitionCfg::isChannelDisplayEnable(uint16_t id) noexcept
+bool AquisitionCfg::isChannelDisplayEnable(uint16_t id)
 {
     if(id < maxChannelNo) return pChannelDisplayEnable[id];
     else return false;
 }
 
-void AquisitionCfg::setChannelEnable(uint16_t id, bool e) noexcept
+void AquisitionCfg::setChannelEnable(uint16_t id, bool e)
 {
     if(id < maxChannelNo) pChannelEnable[id] = e;
 }
 
 
-void AquisitionCfg::setChannelDisplayEnable(uint16_t id, bool e) noexcept
+void AquisitionCfg::setChannelDisplayEnable(uint16_t id, bool e)
 {
     if(id < maxChannelNo) pChannelDisplayEnable[id] = e;
 }
 
 
-void setSamplingFreq(uint32_t sampF) noexcept
+void setSamplingFreq(uint32_t sampF)
 {
     if(sampF <= )
 }
-bool setDownsampling(uint8_t rate) noexcept
+bool setDownsampling(uint8_t rate)
 {
 
 }
-void setBusrtMode(bool e) noexcept
+void setBusrtMode(bool e)
 {
 
 }
-void setAquisitionPeriod(uint16_t p) noexcept
+void setAquisitionPeriod(uint16_t p)
 {
 
 }
-void setSDCardEnable(bool e) noexcept
+void setSDCardEnable(bool e)
 {
 
 }
-void setTransmitEnable(bool e) noexcept
+void setTransmitEnable(bool e)
 {
 
 }

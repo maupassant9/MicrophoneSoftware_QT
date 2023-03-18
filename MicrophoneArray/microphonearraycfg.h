@@ -9,7 +9,7 @@ public:
     MicrophoneArrayCfg();
 
 private:
-    Aquisition aquisitionSetting;
+    AquisitionCfg aquisitionSetting;
     MicrophoneBoard * pBoardSetting;
 };
 

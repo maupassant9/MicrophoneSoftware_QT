@@ -17,10 +17,7 @@ public:
     ~MicrophoneArrayWindow();
 
 signals:
-    void aquisitionStart(AquisitionCfg a)
-
-
-
+    void aquisitionStart(AquisitionCfg a);
 
 private:
     Ui::MicrophoneArrayWindow *ui;

@@ -7,24 +7,24 @@
 class AquisitionCfg
 {
 public:
-    AquisitionCfg(const MicrophoneBoard * b) noexcept;
+    AquisitionCfg(const MicrophoneBoard& b) noexcept;
     ~AquisitionCfg();
     AquisitionCfg(AquisitionCfg && a) noexcept;
     AquisitionCfg(const AquisitionCfg & a) noexcept;
 
     // channel configurations
-    bool isChannelEnable(uint16_t id) noexcept;
-    bool isChannelDisplayEnable(uint16_t id) noexcept;
-    void setChannelEnable(uint16_t id, bool e) noexcept;
-    void setChannelDisplayEnable(uint16_t id, bool e) noexcept;
+    bool isChannelEnable(uint16_t id);
+    bool isChannelDisplayEnable(uint16_t id);
+    void setChannelEnable(uint16_t id, bool e);
+    void setChannelDisplayEnable(uint16_t id, bool e);
 
     //aquisition configurations
-    void setSamplingFreq(uint32_t sampF) noexcept;
-    bool setDownsampling(uint8_t rate) noexcept;
-    void setBusrtMode(bool e) noexcept;
-    void setAquisitionPeriod(uint16_t p) noexcept;
-    void setSDCardEnable(bool e) noexcept;
-    void setTransmitEnable(bool e) noexcept;
+    void setSamplingFreq(uint32_t sampF);
+    bool setDownsampling(uint8_t rate);
+    void setBusrtMode(bool e);
+    void setAquisitionPeriod(uint16_t p);
+    void setSDCardEnable(bool e);
+    void setTransmitEnable(bool e);
     void setFilePath(QString f);
 private:
     uint32_t samplingFreq;

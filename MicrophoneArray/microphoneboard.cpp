@@ -4,13 +4,16 @@ MicrophoneBoard::MicrophoneBoard(
         bool isBurstModeSupport,
         bool hasSDCard,
         bool isTransmitViaCommSupport,
-        int maxChannelNumber,
+        uint8_t maxChannelNumber,
         std::unique_ptr<QList<int>> pSupportedSamplingFreqs,
         std::unique_ptr<QList<int>> pSupportedDownsamplingRate,
         std::unique_ptr<QList<CommunicationType>> pSupportedCommunicationType,
         QString boardFwVersion,
         QString boardHwVersion,
-        QString boardIp):
+        QString boardIp,
+        uint16_t maxSamplingFreq,
+        uint16_t samplingFreqStep,
+        uint16_t maxDownsamplingRate) noexcept:
     isBurstModeSupport {isBurstModeSupport},
     maxChannelNumber {maxChannelNumber},
     isTransmitViaCommSupport {isTransmitViaCommSupport},
@@ -20,7 +23,10 @@ MicrophoneBoard::MicrophoneBoard(
     pSupportedCommunicationType {std::move(pSupportedCommunicationType)},
     boardFwVersion {boardFwVersion},
     boardHwVersion {boardHwVersion},
-    boardIp {boardIp}
+    boardIp {boardIp},
+    maxDownsamplingRate {maxDownsamplingRate},
+    maxSamplingFreq {maxSamplingFreq},
+    samplingFreqStep {samplingFreqStep}
 {
 
 }
