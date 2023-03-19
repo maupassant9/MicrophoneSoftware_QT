@@ -23,8 +23,14 @@ set(PROJECT_SOURCES
         microphoneboard.cpp
         aquisition.h
         aquisition.cpp
-        config.h
-        config.cpp
+        comminterface.h
+        comminterface.cpp
+        communicationserial.h
+        communicationserial.cpp
+        communicationethernet.h
+        communicationethernet.cpp
+        commwarnable.h
+        commwarnable.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

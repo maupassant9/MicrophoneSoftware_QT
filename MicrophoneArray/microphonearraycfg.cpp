@@ -14,9 +14,9 @@
 
 #include "microphonearraycfg.h"
 
-MicrophoneArrayCfg::MicrophoneArrayCfg():
-    pBoardSetting {nullptr},
-    aquisitionSetting {Aquisition()}
+MicrophoneArrayCfg::MicrophoneArrayCfg(MicrophoneBoard *pboard):
+    pBoardSetting {pboard},
+    aquisitionSetting {AquisitionCfg(*pboard)}
 {
 
 }

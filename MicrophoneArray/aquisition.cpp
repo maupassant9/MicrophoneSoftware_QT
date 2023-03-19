@@ -93,7 +93,7 @@ void AquisitionCfg::setChannelDisplayEnable(uint16_t id, bool e)
 
 void setSamplingFreq(uint32_t sampF)
 {
-    if(sampF <= )
+
 }
 bool setDownsampling(uint8_t rate)
 {

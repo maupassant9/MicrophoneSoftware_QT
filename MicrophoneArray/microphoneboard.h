@@ -2,15 +2,11 @@
 #define MICROPHONEBOARD_H
 #include <QDateTime>
 #include <memory>
+#include "comminterface.h"
 
 class MicrophoneBoard
 {
 public:
-    enum class CommunicationType{
-            RS232,
-            Ethernet,
-            USB
-        };
     MicrophoneBoard(bool isBurstModeSupport,
                     bool hasSDCard,
                     bool isTransmitViaCommSupport,
@@ -47,8 +43,11 @@ public:
     QDateTime getBoardDateTime(void);
     static bool verifyVersionString(QString v);
 
+
 private:
     QDateTime boardDateTime;
+    QString getFWVersion();
+    QString getHWVersion();
 
 };
 

@@ -3,11 +3,13 @@
 
 #include <QFileInfo>
 #include "microphoneboard.h"
+#include "commwarnable.h"
 
-class AquisitionCfg
+class AquisitionCfg:public CommWarnable
 {
 public:
     AquisitionCfg(const MicrophoneBoard& b) noexcept;
+    //AquisitionCfg() noexcept;
     ~AquisitionCfg();
     AquisitionCfg(AquisitionCfg && a) noexcept;
     AquisitionCfg(const AquisitionCfg & a) noexcept;

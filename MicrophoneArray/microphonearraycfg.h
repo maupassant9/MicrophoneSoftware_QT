@@ -6,7 +6,7 @@
 class MicrophoneArrayCfg
 {
 public:
-    MicrophoneArrayCfg();
+    MicrophoneArrayCfg(MicrophoneBoard *p);
 
 private:
     AquisitionCfg aquisitionSetting;
