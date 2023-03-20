@@ -39,6 +39,9 @@
         <string>Communication Settings</string>
        </attribute>
        <widget class="QGroupBox" name="groupBoxEthernet">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -96,6 +99,9 @@
         </widget>
        </widget>
        <widget class="QGroupBox" name="groupBoxSerial">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -153,6 +159,9 @@
         </widget>
        </widget>
        <widget class="QGroupBox" name="groupBox_Usb">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -223,6 +232,9 @@
         <string>General Settings</string>
        </attribute>
        <widget class="QGroupBox" name="groupBoxBoardStatus">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -260,7 +272,7 @@
           <item row="3" column="3">
            <widget class="QLineEdit" name="lineEditHwVer">
             <property name="enabled">
-             <bool>true</bool>
+             <bool>false</bool>
             </property>
             <property name="readOnly">
              <bool>true</bool>
@@ -299,6 +311,9 @@
         </widget>
        </widget>
        <widget class="QGroupBox" name="groupBoxChannelEn">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -376,6 +391,9 @@
         </widget>
        </widget>
        <widget class="QGroupBox" name="groupBoxChannelDisp">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -465,6 +483,9 @@
         </widget>
        </widget>
        <widget class="QGroupBox" name="groupBoxTimeSync">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -477,6 +498,9 @@
          <string>Time Setting</string>
         </property>
         <widget class="QPushButton" name="pushButtonSync">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="geometry">
           <rect>
            <x>40</x>
@@ -517,12 +541,15 @@
         <string>Aquisition Settings</string>
        </attribute>
        <widget class="QGroupBox" name="groupBoxAquisition">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
         <property name="geometry">
          <rect>
           <x>10</x>
           <y>0</y>
           <width>171</width>
-          <height>311</height>
+          <height>301</height>
          </rect>
         </property>
         <property name="title">
@@ -532,7 +559,7 @@
          <property name="geometry">
           <rect>
            <x>0</x>
-           <y>30</y>
+           <y>20</y>
            <width>171</width>
            <height>276</height>
           </rect>
@@ -638,49 +665,22 @@ communication interface</string>
          </layout>
         </widget>
        </widget>
-       <widget class="QWidget" name="layoutWidget">
+       <widget class="QGroupBox" name="groupBoxAquisitionFile">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>410</y>
+          <y>300</y>
           <width>171</width>
-          <height>26</height>
+          <height>91</height>
          </rect>
         </property>
-        <layout class="QHBoxLayout" name="horizontalLayout_4">
-         <item>
-          <widget class="QPushButton" name="pushButtonStartAqui">
-           <property name="text">
-            <string>Start</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QPushButton" name="pushButtonStopAqui">
-           <property name="text">
-            <string>Stop</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-       <widget class="QWidget" name="layoutWidget_2">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>320</y>
-          <width>171</width>
-          <height>70</height>
-         </rect>
+        <property name="title">
+         <string>Aquisition File</string>
         </property>
-        <layout class="QVBoxLayout" name="verticalLayout_5">
-         <item>
-          <widget class="QLabel" name="labelSelectDir">
-           <property name="text">
-            <string>Select the directory:</string>
-           </property>
-          </widget>
-         </item>
+        <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,0">
          <item>
           <widget class="QLabel" name="labelDirPath">
            <property name="text">
@@ -696,6 +696,48 @@ communication interface</string>
           </widget>
          </item>
         </layout>
+       </widget>
+       <widget class="QGroupBox" name="groupBoxAquisitionControl">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>395</y>
+          <width>171</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Aquisition Control</string>
+        </property>
+        <widget class="QWidget" name="layoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>20</y>
+           <width>171</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <widget class="QPushButton" name="pushButtonStartAqui">
+            <property name="text">
+             <string>Start</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButtonStopAqui">
+            <property name="text">
+             <string>Stop</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
        </widget>
       </widget>
      </widget>

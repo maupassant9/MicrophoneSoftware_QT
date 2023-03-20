@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="674.0" prefWidth="1074.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <Accordion BorderPane.alignment="CENTER">
+        <panes>
+          <TitledPane animated="false" text="Communication Settings">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="573.0" prefWidth="187.0">
+                     <children>
+                        <VBox layoutX="71.0" layoutY="50.0" prefHeight="573.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <TitledPane animated="false" collapsible="false" prefHeight="115.0" prefWidth="181.0" text="Ethernet">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox layoutX="29.6" layoutY="6.6" prefHeight="89.0" prefWidth="179.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <HBox alignment="CENTER" spacing="10.0">
+                                                   <children>
+                                                      <Label text="Port:" />
+                                                      <TextField prefHeight="25.0" prefWidth="75.0" HBox.hgrow="ALWAYS" />
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                                <HBox alignment="CENTER" spacing="10.0">
+                                                   <children>
+                                                      <Button mnemonicParsing="false" text="Connect" HBox.hgrow="ALWAYS" />
+                                                      <Button mnemonicParsing="false" text="Disconnect" HBox.hgrow="ALWAYS" />
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </TitledPane>
+                              <TitledPane animated="false" collapsible="false" prefHeight="115.0" prefWidth="181.0" text="Serial Port">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox layoutX="19.6" layoutY="19.6" prefHeight="89.0" prefWidth="179.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <HBox alignment="CENTER" spacing="10.0">
+                                                   <children>
+                                                      <Label text="Serial Port:" />
+                                                      <ChoiceBox prefHeight="25.0" prefWidth="79.0" HBox.hgrow="ALWAYS" />
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                                <HBox alignment="CENTER" spacing="10.0">
+                                                   <children>
+                                                      <Button mnemonicParsing="false" text="Connect" HBox.hgrow="ALWAYS" />
+                                                      <Button mnemonicParsing="false" text="Disconnect" HBox.hgrow="ALWAYS" />
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane animated="false" collapsible="false" prefHeight="115.0" prefWidth="181.0" text="USB">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox layoutX="29.6" layoutY="6.6" prefHeight="89.0" prefWidth="179.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <HBox alignment="CENTER" spacing="10.0">
+                                                   <children>
+                                                      <Label text="USB:" />
+                                                      <ChoiceBox prefHeight="25.0" prefWidth="100.0" HBox.hgrow="ALWAYS" />
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                                <HBox alignment="CENTER" spacing="10.0">
+                                                   <children>
+                                                      <Button mnemonicParsing="false" text="Connect" HBox.hgrow="ALWAYS" />
+                                                      <Button mnemonicParsing="false" text="Disconnect" HBox.hgrow="ALWAYS" />
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+          <TitledPane animated="false" text="General Settings">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox layoutX="50.0" layoutY="24.0" prefHeight="573.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <TitledPane animated="false" collapsible="false" prefHeight="135.0" prefWidth="181.0" text="Channel Enable">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox layoutY="-53.0" prefHeight="81.0" prefWidth="179.0" spacing="3.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <CheckBox mnemonicParsing="false" text="Channel 1" />
+                                                <CheckBox mnemonicParsing="false" text="Channel 2" />
+                                                <CheckBox mnemonicParsing="false" text="Channel 3" />
+                                                <CheckBox mnemonicParsing="false" text="Channel 4" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </TitledPane>
+                              <TitledPane animated="false" collapsible="false" prefHeight="136.0" prefWidth="181.0" text="Channel Display">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox layoutX="40.0" layoutY="-57.0" prefHeight="101.0" prefWidth="179.0" spacing="3.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <CheckBox mnemonicParsing="false" text="Channel 1" />
+                                                <CheckBox mnemonicParsing="false" text="Channel 2" />
+                                                <CheckBox mnemonicParsing="false" text="Channel 3" />
+                                                <CheckBox mnemonicParsing="false" text="Channel 4" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </TitledPane>
+                              <TitledPane animated="false" collapsible="false" prefHeight="102.0" prefWidth="181.0" text="Time Setting">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox layoutX="19.6" layoutY="28.6" prefHeight="76.0" prefWidth="179.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <Label text="TimeInfo" />
+                                                <HBox alignment="CENTER">
+                                                   <children>
+                                                      <Button mnemonicParsing="false" text="Syncronize" />
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                             </children>
+                                             <padding>
+                                                <Insets left="4.0" />
+                                             </padding>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </TitledPane>
+                              <TitledPane animated="false" collapsible="false" prefHeight="141.0" prefWidth="181.0" text="Microphone Board Status">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="179.0">
+                                       <children>
+                                          <GridPane layoutX="19.6" layoutY="19.6" prefHeight="167.0" prefWidth="179.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="75.0" minWidth="10.0" prefWidth="50.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="117.0" minWidth="10.0" prefWidth="110.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Label text="FW ver:" />
+                                                <Label text="HW ver:" GridPane.rowIndex="1" />
+                                                <Label text="IP:" GridPane.rowIndex="2" />
+                                                <TextField GridPane.columnIndex="1" />
+                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </TitledPane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+          <TitledPane animated="false" text="Aquisition Settings">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox layoutX="50.0" layoutY="61.0" prefHeight="573.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <TitledPane animated="false" collapsible="false" prefHeight="282.0" prefWidth="181.0" text="Aquisition">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox layoutX="40.0" layoutY="-41.0" prefHeight="180.0" prefWidth="179.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <Label text="Sampling Frequency" />
+                                                <ChoiceBox prefWidth="150.0" />
+                                                <Label text="Downsampling Rate" />
+                                                <ChoiceBox prefWidth="150.0" />
+                                                <CheckBox mnemonicParsing="false" text="Burst Mode" />
+                                                <HBox spacing="3.0">
+                                                   <children>
+                                                      <Label text="Time:" />
+                                                      <TextField prefHeight="25.0" prefWidth="88.0" HBox.hgrow="ALWAYS" />
+                                                      <Label text="s" />
+                                                   </children>
+                                                </HBox>
+                                                <Slider />
+                                                <CheckBox mnemonicParsing="false" text="Enable SD card" />
+                                                <CheckBox mnemonicParsing="false" text="Transmit data via communication interface" wrapText="true" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </TitledPane>
+                              <TitledPane animated="false" collapsible="false" prefHeight="119.0" prefWidth="181.0" text="Aquisition Files">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox layoutX="26.0" layoutY="-20.0" prefHeight="180.0" prefWidth="179.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <Label prefHeight="42.0" prefWidth="168.0" text="FilePath" wrapText="true" VBox.vgrow="ALWAYS" />
+                                                <HBox alignment="CENTER" VBox.vgrow="NEVER">
+                                                   <children>
+                                                      <Button mnemonicParsing="false" text="Select File" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </TitledPane>
+                              <TitledPane animated="false" collapsible="false" prefHeight="73.0" prefWidth="181.0" text="Aquisition Control">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <HBox alignment="CENTER" layoutX="54.0" layoutY="12.0" prefHeight="163.0" prefWidth="179.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <Button mnemonicParsing="false" text="Start" />
+                                                <Button mnemonicParsing="false" text="Stop" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </TitledPane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+        </panes>
+      </Accordion>
+   </left>
+   <top>
+      <MenuBar prefWidth="878.0" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <LineChart prefHeight="149.0" prefWidth="872.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </LineChart>
+            <LineChart prefHeight="188.0" prefWidth="872.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </LineChart>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
