@@ -2,14 +2,19 @@
 #define COMMWARNABLE_H
 
 #include <QObject>
+#include <QSemaphore>
 
 class CommWarnable : public QObject
 {
     Q_OBJECT
 public:
     explicit CommWarnable();
+    bool hasData();
+    void addData(QList<int> datas);
 
-signals:
+private:
+    QSemaphore semaFlag;
+
 
 };
 

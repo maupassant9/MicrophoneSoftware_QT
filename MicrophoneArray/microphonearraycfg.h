@@ -1,16 +1,18 @@
 #ifndef MICROPHONEARRAYCFG_H
 #define MICROPHONEARRAYCFG_H
-#include "aquisition.h"
+
+
+#include "aquisitioncfg.h"
 #include "microphoneboard.h"
 
 class MicrophoneArrayCfg
 {
 public:
-    MicrophoneArrayCfg(MicrophoneBoard *p);
+    MicrophoneArrayCfg(MicrophoneBoard &board);
 
 private:
     AquisitionCfg aquisitionSetting;
-    MicrophoneBoard * pBoardSetting;
+    MicrophoneBoard BoardSetting;
 };
 
 #endif // MICROPHONEARRAYCFG_H

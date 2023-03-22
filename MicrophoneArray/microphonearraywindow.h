@@ -2,7 +2,7 @@
 #define MICROPHONEARRAYWINDOW_H
 
 #include <QMainWindow>
-#include "aquisition.h"
+#include "aquisitioncfg.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MicrophoneArrayWindow; }

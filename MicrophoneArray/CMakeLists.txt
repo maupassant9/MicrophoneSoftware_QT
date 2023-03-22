@@ -21,8 +21,8 @@ set(PROJECT_SOURCES
         microphonearraywindow.ui
         microphoneboard.h
         microphoneboard.cpp
-        aquisition.h
-        aquisition.cpp
+        aquisitioncfg.h
+        aquisitioncfg.cpp
         comminterface.h
         comminterface.cpp
         communicationserial.h
@@ -31,6 +31,8 @@ set(PROJECT_SOURCES
         communicationethernet.cpp
         commwarnable.h
         commwarnable.cpp
+        aquisition.h
+        aquisition.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

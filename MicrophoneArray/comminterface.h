@@ -20,9 +20,9 @@ public:
     std::shared_ptr<CommInterface> getInstance();
     virtual void send(QList<int> datas);
     virtual QList<int> getMicrophoneDatas(uint8_t channel);
-    void connect(CommWarnable o);
-    void disconnect(CommWarnable o);
-    void disconnectAll();
+    static void connect(CommInterface p, CommWarnable o);
+    static void disconnect(CommInterface p, CommWarnable o);
+    static void disconnectAll(CommInterface p);
 
 
 private:
@@ -36,6 +36,8 @@ private:
     QList<CommWarnable> warnable_list;
 
     CommInterface();
+    //delete the copy constructor!! It is a singleton class
+    CommInterface(CommInterface & a) = delete;
     virtual void interpret();
     void warnNewData(uint8_t channel);
 

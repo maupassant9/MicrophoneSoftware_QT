@@ -31,7 +31,7 @@ private:
                     uint16_t maxDownsamplingRate) noexcept;
     //delete the copy constructor!! It is a singleton class
     MicrophoneBoard(MicrophoneBoard & a) = delete;
-    ~MicrophoneBoard();
+    ~MicrophoneBoard() = default;
 
 
     const bool isBurstModeSupport;

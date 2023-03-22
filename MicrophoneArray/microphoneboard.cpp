@@ -33,10 +33,6 @@ MicrophoneBoard::MicrophoneBoard(
 }
 
 
-MicrophoneBoard::~MicrophoneBoard()
-{
-}
-
 bool MicrophoneBoard::verifyVersionString(QString v)
 {
 
