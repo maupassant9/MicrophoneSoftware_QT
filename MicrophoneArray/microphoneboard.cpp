@@ -26,7 +26,42 @@ MicrophoneBoard::MicrophoneBoard(
     boardIp {boardIp},
     maxDownsamplingRate {maxDownsamplingRate},
     maxSamplingFreq {maxSamplingFreq},
-    samplingFreqStep {samplingFreqStep}
+    samplingFreqStep {samplingFreqStep},
+    instance {nullptr}
+{
+
+}
+
+
+MicrophoneBoard::~MicrophoneBoard()
+{
+}
+
+bool MicrophoneBoard::verifyVersionString(QString v)
+{
+
+}
+std::shared_ptr<MicrophoneBoard> MicrophoneBoard::getInstance()
+{
+
+}
+void MicrophoneBoard::setBoardDateTime(QDateTime dt)
+{
+
+}
+QDateTime MicrophoneBoard::getBoardDateTime(void)
+{
+
+}
+QString MicrophoneBoard::getFWVersion()
+{
+
+}
+QString MicrophoneBoard::getHWVersion()
+{
+
+}
+QString MicrophoneBoard::getBoardIp()
 {
 
 }

@@ -7,6 +7,15 @@
 class MicrophoneBoard
 {
 public:
+    static bool verifyVersionString(QString v);
+    static std::shared_ptr<MicrophoneBoard> getInstance();
+    void setBoardDateTime(QDateTime dt);
+    QDateTime getBoardDateTime(void);
+    QString getFWVersion();
+    QString getHWVersion();
+    QString getBoardIp();
+
+private:
     MicrophoneBoard(bool isBurstModeSupport,
                     bool hasSDCard,
                     bool isTransmitViaCommSupport,
@@ -22,6 +31,7 @@ public:
                     uint16_t maxDownsamplingRate) noexcept;
     //delete the copy constructor!! It is a singleton class
     MicrophoneBoard(MicrophoneBoard & a) = delete;
+    ~MicrophoneBoard();
 
 
     const bool isBurstModeSupport;
@@ -38,16 +48,9 @@ public:
     const QString boardHwVersion;
     const QString boardIp;
 
-
-    void setBoardDateTime(QDateTime dt);
-    QDateTime getBoardDateTime(void);
-    static bool verifyVersionString(QString v);
-
-
-private:
+    std::shared_ptr<MicrophoneBoard> instance;
     QDateTime boardDateTime;
-    QString getFWVersion();
-    QString getHWVersion();
+
 
 };
 
