@@ -27,7 +27,7 @@
    <left>
       <Accordion BorderPane.alignment="CENTER">
         <panes>
-          <TitledPane animated="false" text="Communication Settings">
+          <TitledPane animated="false" prefHeight="595.0" prefWidth="247.0" text="Communication Settings">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="573.0" prefWidth="187.0">
                      <children>
