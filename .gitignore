@@ -1,3 +1,7 @@
 */microphone_array.vpp.bak*
 Debug/*
-*/.*/*
+.cmake/*
+.ninja_deps
+.ninja_log
+.qt/*
+.qtc_clangd/*
