@@ -8,7 +8,7 @@
 class AquisitionCfg
 {
 public:
-    AquisitionCfg(const MicrophoneBoard& b) noexcept;
+    AquisitionCfg() noexcept;
     //AquisitionCfg() noexcept;
     ~AquisitionCfg();
     AquisitionCfg(AquisitionCfg && a) noexcept;

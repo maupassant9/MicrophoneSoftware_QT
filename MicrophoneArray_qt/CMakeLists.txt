@@ -29,10 +29,10 @@ set(PROJECT_SOURCES
         communicationserial.cpp
         communicationethernet.h
         communicationethernet.cpp
-        commwarnable.h
-        commwarnable.cpp
         aquisition.h
         aquisition.cpp
+        data.h
+        data.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

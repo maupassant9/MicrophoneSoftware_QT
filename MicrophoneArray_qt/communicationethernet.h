@@ -7,7 +7,7 @@
 class CommunicationEthernet : public CommInterface
 {
     Q_OBJECT
-public:
+private:
     explicit CommunicationEthernet();
 
 signals:

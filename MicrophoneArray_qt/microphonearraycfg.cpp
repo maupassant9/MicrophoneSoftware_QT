@@ -14,9 +14,8 @@
 
 #include "microphonearraycfg.h"
 
-MicrophoneArrayCfg::MicrophoneArrayCfg(MicrophoneBoard &board):
-    boardSetting {board},
-    aquisitionSetting {AquisitionCfg(*pboard)}
+MicrophoneArrayCfg::MicrophoneArrayCfg():
+    pboardSetting {std::move(MicrophoneBoard::getInstance())}
 {
 
 }

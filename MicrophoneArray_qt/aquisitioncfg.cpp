@@ -9,15 +9,15 @@ AquisitionCfg::AquisitionCfg(const MicrophoneBoard &board) noexcept:
     isSDCardEnable {false},
     isTransmitViaCommEnable {false},
     filepath {""},
-    maxChannelNo {board.maxChannelNumber}
+    maxChannelNo {0}
 {
-    if(board.maxChannelNumber == 0){
-        pChannelEnable = nullptr;
-        pChannelDisplayEnable = nullptr;
-    } else {
-        pChannelEnable = new bool[board.maxChannelNumber];
-        pChannelDisplayEnable = new bool[board.maxChannelNumber];
-    }
+//  if (board.maxChannelNumber == 0) {
+//    pChannelEnable = nullptr;
+//    pChannelDisplayEnable = nullptr;
+//  } else {
+//    pChannelEnable = new bool[board.maxChannelNumber];
+//    pChannelDisplayEnable = new bool[board.maxChannelNumber];
+//  }
 }
 
 

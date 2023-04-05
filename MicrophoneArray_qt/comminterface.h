@@ -5,41 +5,33 @@
 #include <memory>
 #include <QMutex>
 #include <QList>
-#include "commwarnable.h"
+#include <QThread>
 
-enum class CommunicationType{
-    RS232,
-    Ethernet,
-    USB
-};
 
-class CommInterface : public QObject
+
+class CommInterface : public QThread
 {
     Q_OBJECT
 public:
+    enum class CommunicationType{
+        RS232,
+        Ethernet,
+        USB
+    };
+
     std::shared_ptr<CommInterface> getInstance();
     virtual void send(QList<int> datas);
-    virtual QList<int> getMicrophoneDatas(uint8_t channel);
-    static void connect(CommInterface p, CommWarnable o);
-    static void disconnect(CommInterface p, CommWarnable o);
-    static void disconnectAll(CommInterface p);
-
+    void run() override;
 
 private:
     std::shared_ptr<CommInterface> instance;
 
-    QMutex read_lock;
-    QMutex write_lock;
-    QList<QList<int>> read_buffer;
     QList<char> read_buffer_raw;
-    QList<QList<char>> write_buffer;
-    QList<CommWarnable> warnable_list;
 
     CommInterface();
     //delete the copy constructor!! It is a singleton class
     CommInterface(CommInterface & a) = delete;
     virtual void interpret();
-    void warnNewData(uint8_t channel);
 
 };
 

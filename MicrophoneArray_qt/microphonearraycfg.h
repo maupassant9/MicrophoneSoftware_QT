@@ -8,11 +8,11 @@
 class MicrophoneArrayCfg
 {
 public:
-    MicrophoneArrayCfg(MicrophoneBoard &board);
+    MicrophoneArrayCfg();
 
 private:
     AquisitionCfg aquisitionSetting;
-    MicrophoneBoard BoardSetting;
+    std::unique_ptr<MicrophoneBoard> pboardSetting;
 };
 
 #endif // MICROPHONEARRAYCFG_H

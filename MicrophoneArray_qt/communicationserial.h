@@ -7,7 +7,7 @@
 class CommunicationSerial : public CommInterface
 {
     Q_OBJECT
-public:
+private:
     explicit CommunicationSerial();
 
 signals:

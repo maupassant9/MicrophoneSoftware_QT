@@ -1,6 +1,6 @@
 #include "aquisition.h"
 
-Aquisition::Aquisition()
+Aquisition::Aquisition(std::weak_ptr<Data> p)
 {
 
 }

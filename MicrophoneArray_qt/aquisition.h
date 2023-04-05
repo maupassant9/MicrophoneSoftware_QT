@@ -3,9 +3,8 @@
 
 #include <QObject>
 #include <fstream>
-#include "commwarnable.h"
-#include "microphonearraycfg.h"
 #include <memory>
+#include "data.h"
 
 enum class CommandID{
     COMMAND_START_AQUISITION = 0x1,
@@ -15,16 +14,14 @@ enum class CommandID{
 };
 
 
-class Aquisition:public CommWarnable
+class Aquisition
 {
 public:
-    Aquisition();
-    void sendCommand(CommandID cmd);
+    Aquisition(std::weak_ptr<Data> p);
+    void sendCommand(CommandID cmd, long parameters);
     void start();
     void stop();
     void save2file(std::ofstream f);
-private:
-    std::unique_ptr<MicrophoneArrayCfg> pconfig;
 };
 
 #endif // AQUISITION_H

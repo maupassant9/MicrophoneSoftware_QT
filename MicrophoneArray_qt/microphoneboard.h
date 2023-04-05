@@ -20,9 +20,9 @@ private:
                     bool hasSDCard,
                     bool isTransmitViaCommSupport,
                     uint8_t maxChannelNumber,
-                    std::unique_ptr<QList<int>> pSupportedSamplingFreqs,
-                    std::unique_ptr<QList<int>> pSupportedDownsamplingRate,
-                    std::unique_ptr<QList<CommunicationType>> pSupportedCommunicationType,
+                    const QList<int>& pSupportedSamplingFreqs,
+                    const QList<int>& pSupportedDownsamplingRate,
+                    const QList<CommInterface::CommunicationType>& pSupportedCommunicationType,
                     QString boardFwVersion,
                     QString boardHwVersion,
                     QString boardIp,
@@ -38,9 +38,9 @@ private:
     const uint8_t maxChannelNumber;
     const bool hasSDCard;
     const bool isTransmitViaCommSupport;
-    const std::unique_ptr<QList<int>> pSupportedSamplingFreqs;
-    const std::unique_ptr<QList<int>> pSupportedDownsamplingRate;
-    const std::unique_ptr<QList<CommunicationType>> pSupportedCommunicationType;
+    const QList<int> supportedSamplingFreqs;
+    const QList<int> supportedDownsamplingRate;
+    const QList<CommInterface::CommunicationType> supportedCommunicationType;
     const uint16_t maxSamplingFreq;
     const uint16_t samplingFreqStep;
     const uint16_t maxDownsamplingRate;
